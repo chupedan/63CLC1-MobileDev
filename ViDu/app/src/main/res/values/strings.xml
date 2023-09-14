@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ViDu</string>
+    <string name="messagge">Hello</string>
+    <string name="niceDay">\nHave a nice day!!</string>
+</resources>
