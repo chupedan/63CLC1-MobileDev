@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TranslateApp</string>
+    <string name="message">Hello World!</string>
+    <string name="btn_text_vi">Vietnamese</string>
+    <string name="btn_text_en">English\n</string>
+</resources>
