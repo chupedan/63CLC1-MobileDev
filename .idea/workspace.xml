@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff3e3840-b712-40c2-b642-96118512a2eb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ActivityLifeCircle/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ActivityLifeCircle/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMICaculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BMICaculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMICaculator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BMICaculator/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BMICaculator/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BMICaculator/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinearLayout/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LinearLayout/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinearLayout/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LinearLayout/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyEx6/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyEx6/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyEx6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyEx6/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/MobileDev"
+    "last_opened_file_path": "D:/MobileDev/63CLC1-MobileDev-destop"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
