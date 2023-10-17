@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         //b3
         ArrayAdapter<String> adapterNNLT = new ArrayAdapter<String>(
                 this,
-                android.R.layout.simple_list_item_2,
+                android.R.layout.simple_dropdown_item_1line,
                 dsNNLT
         );
 
