@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterCountries = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_dropdown_item_1line, // bố cục hiển thị
-                COUNTRIES // nguồn dữ liệu để hiển thị
+                COUNTRIES // nguồn dữ liệu để hiển thịv
         );
 
         // b3

@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.diemminhtri.listviewsimple"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.diemminhtri.listviewsimple"
