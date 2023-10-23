@@ -17,7 +17,6 @@ public class PlayerArrayAdapter extends BaseAdapter {
 
     // constructor
 
-
     public PlayerArrayAdapter(List<Player> lstDataSrc, Context context) {
         this.lstDataSrc = lstDataSrc;
         this.inflater = LayoutInflater.from(context);
