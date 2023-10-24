@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace = "com.diemminhtri.viduintent2"
+    namespace = "com.diemminhtri.testcustomlistview"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.diemminhtri.viduintent2"
-        minSdk = 31
+        applicationId = "com.diemminhtri.testcustomlistview"
+        minSdk = 34
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
