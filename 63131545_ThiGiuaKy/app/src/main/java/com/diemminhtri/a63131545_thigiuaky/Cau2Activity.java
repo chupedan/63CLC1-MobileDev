@@ -1,5 +1,6 @@
 package com.diemminhtri.a63131545_thigiuaky;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class Cau2Activity extends AppCompatActivity {
+    View lastTouchedView;
 
     ArrayList<String> dsCT = new ArrayList<String>();
     @Override
@@ -44,10 +46,18 @@ public class Cau2Activity extends AppCompatActivity {
         lvCT.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                // Kiểm tra xem lastTouchedView có tồn tại hay không
+                if (lastTouchedView != null) {
+                    lastTouchedView.setBackgroundColor(Color.WHITE);
+                }
+
+                // Đặt màu nền của mục mới được chọn
+                view.setBackgroundColor(Color.CYAN);
+                lastTouchedView = view;
 
                 String mucChon = dsCT.get(i).toString();
 
-                String chuoiThongBao = "You selected " + mucChon;
+                String chuoiThongBao = "Bạn đã chọn: " + mucChon;
                 Toast.makeText(Cau2Activity.this, chuoiThongBao, Toast.LENGTH_SHORT).show();
             }
         });
