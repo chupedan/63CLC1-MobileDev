@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentManager fragmentManager = getSupportFragmentManager();
+/*        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 //---get the current display info---
         DisplayMetrics display = this.getResources().getDisplayMetrics();
@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity {
             Fragment2 fragment2 = new Fragment2();
             fragmentTransaction.replace(android.R.id.content, fragment2);
         }
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
     }
 }
