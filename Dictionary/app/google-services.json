@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "688562286897",
+    "project_id": "login-form-31336",
+    "storage_bucket": "login-form-31336.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688562286897:android:a5f9ccadb9e3658d1f0010",
+        "android_client_info": {
+          "package_name": "com.diemminhtri.dictionary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQqABXl180fKSpYUV4dGQD7GfssR7Bkbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
