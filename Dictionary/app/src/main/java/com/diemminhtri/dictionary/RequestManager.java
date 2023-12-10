@@ -51,6 +51,7 @@ public class RequestManager {
             Toast.makeText(context,"An Error Occurred!!", Toast.LENGTH_SHORT).show();
         }
     }
+
     public interface CallDictionary {
         @GET("entries/en/{word}")
         Call<List<APIResponse>> callMeanings (

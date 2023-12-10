@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
+    android:layout_margin="4dp"
     app:cardBackgroundColor="#CDDC39"
     >
     <LinearLayout
@@ -24,6 +25,7 @@
             android:id="@+id/imgBtn_audio"
             android:layout_width="0dp"
             android:src="@drawable/ic_play"
+            android:background="@android:color/transparent"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
     </LinearLayout>
