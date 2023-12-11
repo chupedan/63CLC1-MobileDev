@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tv_phonetics"
+            android:id="@+id/tv_phonetic"
             android:text="halo"
             android:textAlignment="center"
             android:textColor="@color/black"
