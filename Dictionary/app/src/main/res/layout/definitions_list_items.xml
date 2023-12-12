@@ -40,8 +40,12 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tv_synonyms"
-            android:textStyle="normal"
+            android:textStyle="italic"
             android:textSize="16sp"
+            android:padding="8dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
             android:textAlignment="center"
             android:textColor="@color/yellow"
             android:text=""
@@ -57,8 +61,12 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tv_antonyms"
-            android:textStyle="normal"
+            android:textStyle="italic"
             android:textSize="16sp"
+            android:padding="8dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
             android:textAlignment="center"
             android:textColor="@color/yellow"
             android:text=""

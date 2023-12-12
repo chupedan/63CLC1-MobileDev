@@ -20,6 +20,12 @@ import java.util.List;
 public class PhoneticAdapter extends RecyclerView.Adapter<PhoneticViewHolder> {
     private Context context;
     private List<Phonetics> phoneticsList;
+
+    public PhoneticAdapter(Context context, List<Phonetics> phoneticsList) {
+        this.context = context;
+        this.phoneticsList = phoneticsList;
+    }
+
     @NonNull
     @Override
     public PhoneticViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,7 +41,7 @@ public class PhoneticAdapter extends RecyclerView.Adapter<PhoneticViewHolder> {
                 MediaPlayer player = new MediaPlayer();
                 try {
                     player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                    player.setDataSource("https:" + phoneticsList.get(i));
+                    player.setDataSource("https:" + phoneticsList.get(i).getAudio());
                     player.prepare();
                     player.start();
                 } catch (Exception e) {
