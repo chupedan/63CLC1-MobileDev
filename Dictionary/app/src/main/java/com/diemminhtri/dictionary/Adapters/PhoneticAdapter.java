@@ -1,7 +1,7 @@
 package com.diemminhtri.dictionary.Adapters;
 
 import android.content.Context;
-import android.media.AudioManager;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,10 +40,16 @@ public class PhoneticAdapter extends RecyclerView.Adapter<PhoneticViewHolder> {
             public void onClick(View v) {
                 MediaPlayer player = new MediaPlayer();
                 try {
-                    player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                    player.setDataSource("https:" + phoneticsList.get(i).getAudio());
+                    //player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    player.setAudioAttributes(new AudioAttributes.Builder()
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .build());
+
+                    player.setDataSource(phoneticsList.get(i).getAudio());
                     player.prepare();
                     player.start();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(context, "Couldn't play audio", Toast.LENGTH_SHORT).show();
