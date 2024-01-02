@@ -1,6 +1,7 @@
 package com.diemminhtri.dictionary;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -30,16 +31,21 @@ public class Login extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+
+        // Kiểm tra xem người dùng đã đăng nhập chưa và cập nhật giao diện người dùng tương ứng.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
         if(currentUser != null){
-            Toast.makeText(Login.this, "Login successful.",
-                    Toast.LENGTH_SHORT).show();
+            // Nếu người dùng đã đăng nhập, hiển thị thông báo đăng nhập thành công.
+            Toast.makeText(Login.this, "Login successful.", Toast.LENGTH_SHORT).show();
+
+            // Chuyển hướng người dùng đến màn hình từ điển chính.
             Intent intent = new Intent(getApplicationContext(), MainDictionary.class);
             startActivity(intent);
             finish();
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,11 +70,13 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playHelloSound();
                 progressBar.setVisibility(View.VISIBLE);
                 String email, pass;
                 email = String.valueOf(edtEmail.getText());
                 pass = String.valueOf(edtPass.getText());
 
+                // nếu bỏ trống ô email và mật khẩu thì sẽ báo lỗi
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(Login.this,"Please enter email!!", Toast.LENGTH_LONG).show();
                     return;
@@ -78,26 +86,44 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
+                // đăng nhập bằng email và mật khẩu
                 mAuth.signInWithEmailAndPassword(email, pass)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                // Ẩn thanh tiến trình sau khi quá trình đăng nhập hoàn thành
                                 progressBar.setVisibility(View.GONE);
+
                                 if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    Toast.makeText(Login.this, "Login successful.",
-                                            Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    // Nếu quá trình đăng nhập thành công
+                                    Toast.makeText(Login.this, "Login successful.", Toast.LENGTH_SHORT).show();
+
+                                    // Chuyển hướng người dùng đến màn hình chính
+                                    Intent intent = new Intent(getApplicationContext(), MainDictionary.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(Login.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
+                                    // Nếu quá trình đăng nhập thất bại, hiển thị thông báo cho người dùng.
+                                    Toast.makeText(Login.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
+
             }
         });
+
+    }
+    private void playHelloSound() {
+        MediaPlayer hello = MediaPlayer.create(Login.this, R.raw.hello);
+        if (hello != null) {
+            hello.start();
+            hello.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    // Giải phóng tài nguyên khi âm thanh hoàn thành
+                    mp.release();
+                }
+            });
+        }
     }
 }

@@ -30,16 +30,21 @@ public class Register extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+
+        // Kiểm tra xem người dùng đã đăng nhập chưa và cập nhật giao diện người dùng tương ứng.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
         if(currentUser != null){
-            Toast.makeText(Register.this, "Login successful.",
-                    Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            // Nếu người dùng đã đăng nhập, hiển thị thông báo đăng nhập thành công.
+            Toast.makeText(Register.this, "Login successful.", Toast.LENGTH_SHORT).show();
+
+            // Chuyển hướng người dùng đến màn hình từ chính
+            Intent intent = new Intent(getApplicationContext(), MainDictionary.class);
             startActivity(intent);
             finish();
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +73,7 @@ public class Register extends AppCompatActivity {
                 email = String.valueOf(edtEmail.getText());
                 pass = String.valueOf(edtPass.getText());
 
+                // nếu bỏ trống ô email và mật khẩu thì sẽ báo lỗi
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(Register.this,"Please enter email!!", Toast.LENGTH_LONG).show();
                     return;
@@ -77,25 +83,29 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
+                // tạo tài khoản bằng email và mật khẩu
                 mAuth.createUserWithEmailAndPassword(email, pass)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                // Ẩn thanh tiến trình sau khi quá trình đăng ký hoàn thành
                                 progressBar.setVisibility(View.GONE);
+
                                 if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    Toast.makeText(Register.this, "Account created",
-                                            Toast.LENGTH_SHORT).show();
+                                    // Nếu quá trình đăng ký thành công
+                                    Toast.makeText(Register.this, "Account created", Toast.LENGTH_SHORT).show();
+
+                                    // Chuyển hướng người dùng đến màn hình đăng nhập
                                     Intent intent = new Intent(getApplicationContext(), Login.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(Register.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
+                                    // Nếu quá trình đăng ký thất bại, thông báo cho người dùng
+                                    Toast.makeText(Register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
+
             }
         });
     }

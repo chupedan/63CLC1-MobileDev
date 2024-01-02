@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Dictionary</string>
-    <string name="click_to_login">Click to login</string>
-    <string name="click_to_register">Click to register</string>
+    <string name="click_to_login"><u>Click to login</u></string>
+    <string name="click_to_register"><u>Click to register</u></string>
 </resources>
