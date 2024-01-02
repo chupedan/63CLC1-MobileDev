@@ -1,5 +1,6 @@
 package com.diemminhtri.dictionary.Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
@@ -34,7 +35,7 @@ public class PhoneticAdapter extends RecyclerView.Adapter<PhoneticViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PhoneticViewHolder holder, int i) {
+    public void onBindViewHolder(@NonNull PhoneticViewHolder holder, @SuppressLint("RecyclerView") int i) {
         // Phương thức này được gọi khi RecyclerView muốn hiển thị dữ liệu của một item tại vị trí cụ thể.
 
         holder.tv_phonetic.setText(phoneticsList.get(i).getText());
