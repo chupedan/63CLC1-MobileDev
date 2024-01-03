@@ -26,6 +26,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
             </androidx.appcompat.widget.SearchView>
+            <!-- Nút ghi âm -->
+            <ImageButton
+                android:id="@+id/btn_record_search"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_record"
+                android:background="@android:color/transparent"
+                android:layout_gravity="end|center_vertical"/>
 
 
         </androidx.cardview.widget.CardView>
@@ -64,7 +72,15 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <Button
+            android:id="@+id/btn_about"
+            android:backgroundTint="@color/yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="About me" />
+        <Button
             android:id="@+id/btn_logout"
+            android:backgroundTint="@color/yellow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

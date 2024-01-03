@@ -30,7 +30,6 @@ public class Register extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-
         // Kiểm tra xem người dùng đã đăng nhập chưa và cập nhật giao diện người dùng tương ứng.
         FirebaseUser currentUser = mAuth.getCurrentUser();
 

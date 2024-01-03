@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         dsQG.add(qg3);
 
         // tim dieu khien
-        ListView lvQG = findViewById(R.id.lisViewNation);
+        ListView lvQG = findViewById(R.id.lsViewNation);
 
         // Tao adapter
         CountryArrayAdapter adapter;

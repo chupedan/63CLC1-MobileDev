@@ -37,6 +37,7 @@ dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
     implementation("com.google.firebase:firebase-auth:22.3.0")
 
     testImplementation("junit:junit:4.13.2")

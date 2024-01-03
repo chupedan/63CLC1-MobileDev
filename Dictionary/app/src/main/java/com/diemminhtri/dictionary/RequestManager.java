@@ -24,7 +24,7 @@ public class RequestManager {
             .baseUrl("https://api.dictionaryapi.dev/api/v2/")
             //Thiết lập địa chỉ cơ sở cho API. Tất cả các endpoint sẽ được nối thêm vào địa chỉ cơ sở này để tạo địa chỉ hoàn chỉnh.
             .addConverterFactory(GsonConverterFactory.create())
-            // "GsonConverterFactory.create()" được sử dụng để chuyển đổi JSON thành các đối tượng Java (và ngược lại) bằng thư viện Gson.
+            // "GsonConverterFactory.create()" được sử dụng để chuyển đổi JSON thành các đối tượng Java bằng thư viện Gson.
             .build();
 
     public RequestManager(Context context) {
